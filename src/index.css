@@ -72,16 +72,26 @@
 .product5 {
   @apply w-screen h-mid bg-no-repeat bg-cover sm:bg-cover overflow-x-hidden transition-all;
 }
-.product0 {
+.modelInfo0,
+.modelInfo1,
+.modelInfo2,
+.modelInfo3 {
+  @apply w-screen h-72 md:h-96 mt-32 bg-no-repeat bg-cover  overflow-x-hidden  transition-all;
+}
+.product0,
+.modelInfo0 {
   background-image: url("https://tickernews.co/wp-content/uploads/2021/06/ms-homepage-social.jpg");
 }
-.product1 {
+.product1,
+.modelInfo1 {
   background-image: url("https://i0.wp.com/suvcult.com/wp-content/uploads/2021/04/0x0-Model_Y_05-e1618260036195-1024x515.jpg?resize=810%2C407&ssl=1");
 }
-.product2 {
+.product2,
+.modelInfo2 {
   background-image: url("https://cdn.motor1.com/images/mgl/o6rGE/s3/tesla-model-3.webp");
 }
-.product3 {
+.product3,
+.modelInfo3 {
   background-image: url("https://media.zigcdn.com/media/model/2021/Jan/top-view-572315385_600x400.jpg");
 }
 .product4 {

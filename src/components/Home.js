@@ -12,8 +12,12 @@ const Home = () => {
       <Sidebar />
       <div className="py-1 text-gray-500 bg-white w-screen flex justify-center items-center fixed top-0 left-0 z-20">
         <h1 className="text-md  text-light underline pt-3 pb-3">
-          Build by Kundan Mishra{" "}
-          <a href="https://github.com/mishra811/tesla-clone">
+          Built by Kundan Mishra{" "}
+          <a
+            href="https://github.com/mishra811/tesla-clone"
+            target="_blank"
+            className="text-black pl-2"
+          >
             (Check GitHub repo)
           </a>
         </h1>
@@ -24,6 +28,7 @@ const Home = () => {
 };
 
 const Model = () => {
+  const { showSidebar } = useGlobalContext();
   return (
     <main className="model">
       <section className="fixed top-14 w-screen">
@@ -45,14 +50,23 @@ const Model = () => {
               </h1>
             </div>
             <div className="flex flex-col  mt-64 sm:mt-72 justify-center items-center sm:flex-row mr-10">
-              <div className="w-11/12  sm:w-72 py-2 text-center bg-gray-550 text-white rounded-3xl mb-4 sm:mb-0 sm:mr-8 cursor-pointer">
-                CUSTOM ORDER
-              </div>
-              <div className="w-11/12  sm:w-72 py-2 text-center bg-gray-150 text-gray-700 rounded-3xl sm:ml-8 cursor-pointer">
-                EXISTING INVENTORY
-              </div>
+              <Link
+                to="/3"
+                className="w-11/12  sm:w-72 py-2 text-center bg-gray-550 text-white rounded-3xl mb-4 sm:mb-0 sm:mr-8 cursor-pointer"
+              >
+                ELECTRIC CARS
+              </Link>
+              <Link
+                to="4"
+                className="w-11/12  sm:w-72 py-2 text-center bg-gray-150 text-gray-700 rounded-3xl sm:ml-8 cursor-pointer"
+              >
+                SOLAR PRODUCTS
+              </Link>
             </div>
-            <div className="flex justify-center items-center   transform scale-105">
+            <div
+              className="flex justify-center items-center   transform scale-105"
+              onClick={showSidebar}
+            >
               <div className="w-20 h-20 mb-2 pl-6 pr-6 py-5 animate-bounce mt-3">
                 <img
                   src="https://image.flaticon.com/icons/png/128/271/271210.png"

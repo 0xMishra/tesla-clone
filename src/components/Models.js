@@ -4,6 +4,7 @@ import { Navbar } from "./Home";
 import Fade from "react-reveal/Fade";
 import { bgImageArray, images } from "../data";
 import { modelsArr, infoModelArr } from "../data";
+import { Link } from "react-router-dom";
 const Models = () => {
   const { id } = useParams();
   const { head1, para1, head2, para2, head3, para3 } = modelsArr[id];
@@ -51,9 +52,7 @@ const Models = () => {
                 heading="Real Storage"
                 info="With front and rear trunks and fold-flat seats, Model S is a luxury car where you can fit your bike without taking the wheel off, and your luggage too.."
               />
-              <section
-                className={`bg-${bgImageArray[id]} w-screen h-72 md:h-96 mt-32 bg-no-repeat bg-cover  overflow-x-hidden  transition-all`}
-              >
+              <section className={`modelInfo${id}`}>
                 <div className="flex  justify-center text-white text-center pt-56 md:pt-80 pb-5">
                   <div className="px-4 mx-2  mw-max md:px-4 md:mx-0">
                     <h1 className="text-xl font-bold text-center">{head1}</h1>
@@ -156,9 +155,12 @@ const ModelComponent = ({ modelName, id }) => {
               </div>
             </div>
             <div className="flex flex-col   justify-center items-center sm:flex-row mr-10 w-11/12 md:w-72">
-              <div className="w-11/12  md:w-72 py-2 text-center bg-transparent border-4 border-white ml-4 text-white font-semibold rounded-3xl mb-4 sm:mb-0 sm:mr-8 mt-5 md:mt-0 cursor-pointer transition-all hover:bg-white hover:text-black">
+              <Link
+                to="/2"
+                className="w-11/12  md:w-72 py-2 text-center bg-transparent border-4 border-white ml-4 text-white font-semibold rounded-3xl mb-4 sm:mb-0 sm:mr-8 mt-5 md:mt-0 cursor-pointer transition-all hover:bg-white hover:text-black"
+              >
                 ORDER NOW
-              </div>
+              </Link>
             </div>
           </section>
         </article>
@@ -167,7 +169,7 @@ const ModelComponent = ({ modelName, id }) => {
   );
 };
 
-const Property = ({ head, title, para, id }) => {
+const Property = ({ head, title, para }) => {
   return (
     <Fade top>
       <div className="px-10 bg-white py-16 md:flex  md:justify-center md:items-center">
@@ -196,12 +198,18 @@ const BottomInfo = ({ id }) => {
         </h1>
         <Fade bottom>
           <div className="flex sm:flex-row flex-col">
-            <div className="w-11/12 sm:w-72 md:w-80 lg:w-96 py-2 text-center bg-transparent border-2 border-black ml-4 hover:text-white font-normal rounded-3xl mb-4 sm:mb-0 sm:mr-8 mt-5 md:mt-0 cursor-pointer transition-all hover:bg-black ">
+            <Link
+              to="/4"
+              className="w-11/12 sm:w-72 md:w-80 lg:w-96 py-2 text-center bg-transparent border-2 border-black ml-4 hover:text-white font-normal rounded-3xl mb-4 sm:mb-0 sm:mr-8 mt-5 md:mt-0 cursor-pointer transition-all hover:bg-black "
+            >
               ORDER NOW
-            </div>
-            <div className="w-11/12 sm:w-72 md:w-80 py-2 text-center bg-transparent border-2 border-black ml-4 hover:text-white font-normal rounded-3xl mb-4 sm:mb-0 sm:mr-8 mt-5 md:mt-0 cursor-pointer transition-all hover:bg-black lg:w-96">
+            </Link>
+            <Link
+              to="/3"
+              className="w-11/12 sm:w-72 md:w-80 py-2 text-center bg-transparent border-2 border-black ml-4 hover:text-white font-normal rounded-3xl mb-4 sm:mb-0 sm:mr-8 mt-5 md:mt-0 cursor-pointer transition-all hover:bg-black lg:w-96"
+            >
               COMPARE
-            </div>
+            </Link>
           </div>
         </Fade>
       </div>
