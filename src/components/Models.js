@@ -129,7 +129,9 @@ const ModelComponent = ({ modelName, id }) => {
             {modelName.split("-").join(" ")}
           </h1>
           <div className="text-center">
-            <h1 className={`text-black mt-1 text-lg select-none`}>{header}</h1>
+            <h1 className={`text-black mt-1 text-lg select-none underline`}>
+              {header}
+            </h1>
           </div>
 
           {slogan && (

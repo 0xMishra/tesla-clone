@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "../index.css";
 import "react-slidedown/lib/slidedown.css";
 import { useGlobalContext } from "../Context";
@@ -42,7 +42,8 @@ const Model = () => {
               <h1 className="text-gray-600 mt-1">
                 Order Online for{" "}
                 <a
-                  href="#"
+                  href="https://github.com/mishra811/tesla-clone"
+                  target="_blank"
                   className="underline hover:text-black transition-all"
                 >
                   Touchless Delivery
@@ -107,18 +108,20 @@ export const Navbar = () => {
         })}
       </div>
       <div className="md:flex md:items-center justify-evenly text-sm font-semibold pr-5 ">
-        <Link
-          to="/"
+        <a
+          href="https://github.com/mishra811/tesla-clone"
+          target="_blank"
           className="px-5 hidden lg:block hover:bg-gray-450 py-2 cursor-pointer transition-all"
         >
           Shop
-        </Link>
-        <Link
-          to="/"
+        </a>
+        <a
+          href="https://github.com/mishra811/tesla-clone"
+          target="_blank"
           className="px-5 hidden lg:block hover:bg-gray-450 py-2 transition-all cursor-pointer"
         >
           Account
-        </Link>
+        </a>
         <h1
           className="px-5 bg-gray-450 py-2 rounded-lg cursor-pointer mr-2"
           onClick={showSidebar}

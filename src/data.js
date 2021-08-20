@@ -11,7 +11,11 @@ const bgImageArray = [
 const modelsArr = [
   {
     id: 0,
-    header: "Plaid",
+    header: (
+      <a href="https://github.com/mishra811/tesla-clone" target="_blank">
+        By Kundan Mishra
+      </a>
+    ),
     head1: "396mi",
     para1: "Range (EPA est.)",
     head2: "1.99s",
@@ -23,7 +27,11 @@ const modelsArr = [
   },
   {
     id: 1,
-    header: "long route",
+    header: (
+      <a href="https://github.com/mishra811/tesla-clone" target="_blank">
+        By Kundan Mishra
+      </a>
+    ),
     head1: "3.1s",
     para1: "0-60 mph*",
     head2: "353mi",
@@ -35,7 +43,11 @@ const modelsArr = [
   },
   {
     id: 2,
-    header: "Plaid",
+    header: (
+      <a href="https://github.com/mishra811/tesla-clone" target="_blank">
+        By Kundan Mishra
+      </a>
+    ),
     head1: "340mi",
     para1: "Range (EPA est.)",
     head2: "2.5s",
@@ -47,7 +59,11 @@ const modelsArr = [
   },
   {
     id: 3,
-    header: "Long Route",
+    header: (
+      <a href="https://github.com/mishra811/tesla-clone" target="_blank">
+        By Kundan Mishra
+      </a>
+    ),
     head1: "396mi",
     para1: "Range (EPA est.)",
     head2: "76 cu ft",
@@ -59,7 +75,11 @@ const modelsArr = [
   },
   {
     id: 4,
-    header: "solar",
+    header: (
+      <a href="https://github.com/mishra811/tesla-clone" target="_blank">
+        By Kundan Mishra
+      </a>
+    ),
 
     head1: <CropLandscapeIcon />,
     para1: "Beautiful Solar",
@@ -71,7 +91,11 @@ const modelsArr = [
   },
   {
     id: 5,
-    header: "solar",
+    header: (
+      <a href="https://github.com/mishra811/tesla-clone" target="_blank">
+        By Kundan Mishra
+      </a>
+    ),
     head1: <CropLandscapeIcon />,
     para1: "Free Energy",
     head2: "$",
