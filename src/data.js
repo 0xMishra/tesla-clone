@@ -18,24 +18,20 @@ const modelsArr = [
     para2: "0-60 mph*",
     head3: "200 mph",
     para3: "Top Speed*",
-    op2: 1,
 
-    slogan: "h",
-    op: 0,
+    slogan: "High Power",
   },
   {
     id: 1,
-    header: "h",
+    header: "long route",
     head1: "3.1s",
     para1: "0-60 mph*",
     head2: "353mi",
     para2: "Range(EPA est.)",
     head3: "AWD",
     para3: "Dual Motor",
-    op2: 0,
 
-    slogan: "h",
-    op: 0,
+    slogan: "High Power",
   },
   {
     id: 2,
@@ -46,29 +42,24 @@ const modelsArr = [
     para2: "0-60 mph*",
     head3: "9.9s",
     para3: "1/4 Mile",
-    op2: 1,
 
-    slogan: "h",
-    op: 0,
+    slogan: "High Power",
   },
   {
     id: 3,
-    header: "h",
+    header: "Long Route",
     head1: "396mi",
     para1: "Range (EPA est.)",
     head2: "76 cu ft",
     para2: "Cargo Space",
     head3: "AWD",
     para3: "Dual Motor",
-    op2: 0,
 
-    slogan: "h",
-    op: 0,
+    slogan: "High Power",
   },
   {
     id: 4,
     header: "solar",
-    op2: 0,
 
     head1: <CropLandscapeIcon />,
     para1: "Beautiful Solar",
@@ -77,13 +68,10 @@ const modelsArr = [
     head3: <AvTimerIcon />,
     para3: "Pays for itself ",
     slogan: "Transform your roof and produce clean energy",
-
-    op: 1,
   },
   {
     id: 5,
     header: "solar",
-    op2: 0,
     head1: <CropLandscapeIcon />,
     para1: "Free Energy",
     head2: "$",
@@ -91,8 +79,6 @@ const modelsArr = [
     head3: "24/7",
     para3: "Monotoring ",
     slogan: "Lowest Cost Solar Panels in America",
-
-    op: 1,
   },
 ];
 

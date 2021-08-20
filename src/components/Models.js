@@ -29,7 +29,6 @@ const Models = () => {
                 info="  Up to 10 teraflops of processing power enables in-car gaming on-par
             with today’s newest consoles. Wireless controller compatibility lets
             you game from any seat."
-                rowDir="flex-row"
               />
             </Fade>
             <Fade right>
@@ -37,7 +36,6 @@ const Models = () => {
                 url="https://tesla-cdn.thron.com/delivery/public/image/tesla/08d2e941-2be2-4e1a-bed9-924ac30fb115/bvlatuR/std/1040x584/MS-Interior-Grid-B-Desktop"
                 heading="Stay Connected"
                 info=" Multi-device Bluetooth, wireless and USB-C charging for every passenger, with enough power to fast-charge your tablets and laptop.."
-                rowDir="flex-row-reverse"
               />
             </Fade>
             <Fade left>
@@ -45,7 +43,6 @@ const Models = () => {
                 url="https://tesla-cdn.thron.com/delivery/public/image/tesla/c49862d9-6501-4d04-8d39-1929fa019bc5/bvlatuR/std/840x472/MS-Interior-Grid-C-Mobile"
                 heading="Your Best Audio System"
                 info="A 22-speaker, 960-watt audio system with active noise canceling offers the best listening experience at home or on the road.."
-                rowDir="flex-row"
               />
             </Fade>
             <>
@@ -53,7 +50,6 @@ const Models = () => {
                 url="https://tesla-cdn.thron.com/delivery/public/image/tesla/bc361d94-167c-49cb-8e0a-5724ce9ed607/bvlatuR/std/840x472/MS-Interior-Grid-D-Mobile"
                 heading="Real Storage"
                 info="With front and rear trunks and fold-flat seats, Model S is a luxury car where you can fit your bike without taking the wheel off, and your luggage too.."
-                rowDir="flex-row-reverse"
               />
               <section
                 className={`bg-${bgImageArray[id]} w-screen h-72 md:h-96 mt-32 bg-no-repeat bg-cover  overflow-x-hidden  transition-all`}
@@ -89,11 +85,11 @@ const Models = () => {
     </>
   );
 };
-const ModelIntro = ({ url, rowDir, heading, info }) => {
+const ModelIntro = ({ url, heading, info }) => {
   return (
     <Fade right>
       <div className="flex flex-col mt-20 lg:mx-20 md:items-center md:justify-center text-white sm:mx-5">
-        <div className={`flex flex-col md:${rowDir}`}>
+        <div className={`md:flex`}>
           <img
             src={url}
             alt=""
@@ -114,9 +110,7 @@ const ModelIntro = ({ url, rowDir, heading, info }) => {
 };
 const ModelHeader = ({ id }) => {
   return (
-    <main
-      className={`bg-${bgImageArray[id]} w-screen h-mid bg-no-repeat bg-cover sm:bg-cover overflow-x-hidden transition-all`}
-    >
+    <main className={`product${id}`}>
       <section className="relative top-2 w-screen">
         <Navbar />
         <ModelComponent modelName={bgImageArray[id]} id={id} />
@@ -125,27 +119,23 @@ const ModelHeader = ({ id }) => {
   );
 };
 const ModelComponent = ({ modelName, id }) => {
-  const { header, head1, para1, head2, para2, head3, para3, slogan, op, op2 } =
+  const { header, head1, para1, head2, para2, head3, para3, slogan } =
     modelsArr[id];
   return (
     <>
       {" "}
       <Fade bottom>
         <article>
-          <h1 className="text-center text-4xl   text-black font-semibold  mt-8 tracking-wider sm:text-5xl transition-all">
+          <h1 className="text-center text-4xl   text-gray-900 font-semibold  mt-8 tracking-wider sm:text-5xl transition-all">
             {modelName.split("-").join(" ")}
           </h1>
           <div className="text-center">
-            <h1
-              className={`text-black mt-1 text-lg select-none opacity-${op2}`}
-            >
-              {header}
-            </h1>
+            <h1 className={`text-black mt-1 text-lg select-none`}>{header}</h1>
           </div>
 
           {slogan && (
             <div
-              className={`text-xl font-semibold text-center mt-60 md:mt-72  text-white mb-4 select-none opacity-${op}`}
+              className={`text-xl font-semibold text-center mt-60 md:mt-72  text-white mb-4 select-none `}
             >
               {slogan}
             </div>
@@ -177,12 +167,10 @@ const ModelComponent = ({ modelName, id }) => {
   );
 };
 
-const Property = ({ head, title, para, dir }) => {
+const Property = ({ head, title, para, id }) => {
   return (
     <Fade top>
-      <div
-        className={`px-10 bg-white py-16 flex flex-col md:${dir} md:justify-center md:items-center`}
-      >
+      <div className="px-10 bg-white py-16 md:flex  md:justify-center md:items-center">
         <div className="w-max md:ml-32 flex flex-col">
           <h1 className="font-light text-2xl">{head}</h1>
           <h1 className="font-semibold text-2xl mb-3 ">{title}</h1>

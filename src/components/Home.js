@@ -6,18 +6,17 @@ import Sidebar from "./Sidebar";
 import Fade from "react-reveal/Fade";
 import { Link } from "react-router-dom";
 import { bgImageArray } from "../data";
-import { useEffect } from "react";
 const Home = () => {
   return (
     <main className="flex flex-col overflow-x-hidden">
       <Sidebar />
       <div className="py-1 text-gray-500 bg-white w-screen flex justify-center items-center fixed top-0 left-0 z-20">
-        <a
-          href="https://github.com/mishra811/tesla-clone"
-          className="text-md  text-light underline pt-3 pb-3"
-        >
-          Build with React by Kundan Mishra
-        </a>
+        <h1 className="text-md  text-light underline pt-3 pb-3">
+          Build by Kundan Mishra{" "}
+          <a href="https://github.com/mishra811/tesla-clone">
+            (Check GitHub repo)
+          </a>
+        </h1>
       </div>
       <Model />
     </main>
@@ -25,22 +24,14 @@ const Home = () => {
 };
 
 const Model = () => {
-  const [index, setIndex] = useState(0);
-  useEffect(() => {
-    setInterval(() => {
-      setIndex(Math.floor(Math.random() * 5));
-    }, 2000);
-  }, []);
   return (
-    <main
-      className={`bg-${bgImageArray[index]} w-screen h-screen bg-no-repeat bg-cover sm:bg-cover pl-4 pr-3 transition-all overflow-x-hidden`}
-    >
+    <main className="model">
       <section className="fixed top-14 w-screen">
         <Navbar />
         <Fade bottom>
           <article data-aos="fade-down">
-            <h1 className="text-center text-4xl  font-semibold text-gray-700 -mt-3 tracking-wider sm:text-5xl transition-all">
-              {bgImageArray[index].split("-").join(" ")}
+            <h1 className="greet">
+              <span></span>
             </h1>
             <div className="text-center">
               <h1 className="text-gray-600 mt-1">
