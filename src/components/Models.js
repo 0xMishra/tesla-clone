@@ -16,13 +16,14 @@ const Models = () => {
 
         {id <= 3 && (
           <>
-            <div
-              className={`bg-modelSInterior w-screen h-mid bg-no-repeat  bg-cover sm:bg-cover overflow-x-hidden transition-all flex mt-5 justify-center `}
-            >
-              <div className=" text-2xl pt-20 font-semibold ">
-                All-New Interior
-              </div>
-            </div>
+            <Fade top>
+              <img
+                src="https://cdn.motor1.com/images/mgl/0MnWm/s1/2021-tesla-model-s-plaid.jpg"
+                alt=""
+                className={` w-screen h-mid object-cover `}
+              />
+            </Fade>
+
             <Fade left>
               <ModelIntro
                 url="https://tesla-cdn.thron.com/delivery/public/image/tesla/2a7b8898-d56d-47d9-9f0c-916cc2e4a279/bvlatuR/std/840x472/MS-Interior-Grid-A-Mobile"

@@ -9,10 +9,7 @@ module.exports = {
       width: {
         mid: "500px",
       },
-      backgroundImage: (theme) => ({
-        modelSInterior:
-          "url('https://cdn.motor1.com/images/mgl/0MnWm/s1/2021-tesla-model-s-plaid.jpg')",
-      }),
+
       colors: {
         "gray-150": "rgba(255, 255, 255, 0.9)",
         "gray-450": "rgba(73, 73, 73, 0.1)",
