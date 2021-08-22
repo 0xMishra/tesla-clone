@@ -115,13 +115,12 @@ export const Navbar = () => {
         >
           Shop
         </a>
-        <a
-          href="https://github.com/mishra811/tesla-clone"
-          target="_blank"
+        <Link
+          to="/"
           className="px-5 hidden lg:block hover:bg-gray-450 py-2 transition-all cursor-pointer"
         >
-          Account
-        </a>
+          Home
+        </Link>
         <h1
           className="px-5 bg-gray-450 py-2 rounded-lg cursor-pointer mr-2"
           onClick={showSidebar}
