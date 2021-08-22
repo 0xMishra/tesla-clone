@@ -10,6 +10,7 @@ const Sidebar = () => {
     <>
       <div
         className={`fixed  top-0 flex ${display}  bg-gray-650  z-50 transition-all ${width}`}
+        onClick={hideSidebar}
       >
         <div className=" w-screen h-screen "></div>
         <div
@@ -24,7 +25,7 @@ const Sidebar = () => {
               x
             </h1>
           </div>
-          <div className="h-max pl-3 pt-4 overflow-y-scroll flex flex-col">
+          <div className="h-max pl-3 sm:pt-4  flex flex-col text-lg sm:text-sm pt-1">
             {bgImageArray.map((item, index) => {
               return (
                 <Link

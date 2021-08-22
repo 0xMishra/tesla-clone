@@ -11,50 +11,54 @@ const Models = () => {
 
   return (
     <>
-      <div className=" h-screen bg-black overflow-x-hidden">
+      <div className=" h-screen bg-white overflow-x-hidden">
         <ModelHeader id={id} />
 
         {id <= 3 && (
           <>
-            <Fade top>
-              <img
-                src="https://cdn.motor1.com/images/mgl/0MnWm/s1/2021-tesla-model-s-plaid.jpg"
-                alt=""
-                className={` w-screen h-mid object-cover `}
-              />
-            </Fade>
+            <article className="bg-black">
+              <Fade top>
+                <img
+                  src="https://cdn.motor1.com/images/mgl/0MnWm/s1/2021-tesla-model-s-plaid.jpg"
+                  alt=""
+                  className={` w-screen h-mid object-cover `}
+                />
+              </Fade>
 
-            <Fade left>
-              <ModelIntro
-                url="https://tesla-cdn.thron.com/delivery/public/image/tesla/2a7b8898-d56d-47d9-9f0c-916cc2e4a279/bvlatuR/std/840x472/MS-Interior-Grid-A-Mobile"
-                heading="Game from Anywhere"
-                info="  Up to 10 teraflops of processing power enables in-car gaming on-par
+              <Fade left>
+                <ModelIntro
+                  url="https://tesla-cdn.thron.com/delivery/public/image/tesla/2a7b8898-d56d-47d9-9f0c-916cc2e4a279/bvlatuR/std/840x472/MS-Interior-Grid-A-Mobile"
+                  heading="Game from Anywhere"
+                  info="  Up to 10 teraflops of processing power enables in-car gaming on-par
             with today’s newest consoles. Wireless controller compatibility lets
             you game from any seat."
-              />
-            </Fade>
-            <Fade right>
-              <ModelIntro
-                url="https://tesla-cdn.thron.com/delivery/public/image/tesla/08d2e941-2be2-4e1a-bed9-924ac30fb115/bvlatuR/std/1040x584/MS-Interior-Grid-B-Desktop"
-                heading="Stay Connected"
-                info=" Multi-device Bluetooth, wireless and USB-C charging for every passenger, with enough power to fast-charge your tablets and laptop.."
-              />
-            </Fade>
-            <Fade left>
-              <ModelIntro
-                url="https://tesla-cdn.thron.com/delivery/public/image/tesla/c49862d9-6501-4d04-8d39-1929fa019bc5/bvlatuR/std/840x472/MS-Interior-Grid-C-Mobile"
-                heading="Your Best Audio System"
-                info="A 22-speaker, 960-watt audio system with active noise canceling offers the best listening experience at home or on the road.."
-              />
-            </Fade>
+                />
+              </Fade>
+              <Fade right>
+                <ModelIntro
+                  url="https://tesla-cdn.thron.com/delivery/public/image/tesla/08d2e941-2be2-4e1a-bed9-924ac30fb115/bvlatuR/std/1040x584/MS-Interior-Grid-B-Desktop"
+                  heading="Stay Connected"
+                  info=" Multi-device Bluetooth, wireless and USB-C charging for every passenger, with enough power to fast-charge your tablets and laptop.."
+                />
+              </Fade>
+              <Fade left>
+                <ModelIntro
+                  url="https://tesla-cdn.thron.com/delivery/public/image/tesla/c49862d9-6501-4d04-8d39-1929fa019bc5/bvlatuR/std/840x472/MS-Interior-Grid-C-Mobile"
+                  heading="Your Best Audio System"
+                  info="A 22-speaker, 960-watt audio system with active noise canceling offers the best listening experience at home or on the road.."
+                />
+              </Fade>
+              <Fade bottom>
+                <ModelIntro
+                  url="https://tesla-cdn.thron.com/delivery/public/image/tesla/bc361d94-167c-49cb-8e0a-5724ce9ed607/bvlatuR/std/840x472/MS-Interior-Grid-D-Mobile"
+                  heading="Real Storage"
+                  info="With front and rear trunks and fold-flat seats, Model S is a luxury car where you can fit your bike without taking the wheel off, and your luggage too.."
+                />
+              </Fade>
+            </article>
             <>
-              <ModelIntro
-                url="https://tesla-cdn.thron.com/delivery/public/image/tesla/bc361d94-167c-49cb-8e0a-5724ce9ed607/bvlatuR/std/840x472/MS-Interior-Grid-D-Mobile"
-                heading="Real Storage"
-                info="With front and rear trunks and fold-flat seats, Model S is a luxury car where you can fit your bike without taking the wheel off, and your luggage too.."
-              />
               <section className={`modelInfo${id}`}>
-                <div className="flex  justify-center text-white text-center pt-56 md:pt-80 pb-5">
+                <div className="flex  justify-center text-black text-center pt-56 md:pt-80 pb-5">
                   <div className="px-4 mx-2  mw-max md:px-4 md:mx-0">
                     <h1 className="text-xl font-bold text-center">{head1}</h1>
                     <h1 className="text-sm font-semibold ">{para1}</h1>
@@ -87,25 +91,21 @@ const Models = () => {
 };
 const ModelIntro = ({ url, heading, info }) => {
   return (
-    <Fade right>
-      <div className="flex flex-col mt-20 lg:mx-20 md:items-center md:justify-center text-white sm:mx-5">
-        <div className={`md:flex`}>
-          <img
-            src={url}
-            alt=""
-            className="w-screen h-4/5 md:w-mid sm:h-64 object-cover"
-          />
-          <div className="flex-col flex lg:mx-8 sm:mx-2">
-            <h1 className="my-2 font-bold text-white text-xl  mx-5">
-              {heading}
-            </h1>
-            <p className="mx-5 text-semibold tracking-tight lg:w-96 md:w-60">
-              {info}
-            </p>
-          </div>
+    <div className="flex flex-col   md:items-center md:justify-center text-white   pt-10 pb-10">
+      <div className={`md:flex`}>
+        <img
+          src={url}
+          alt=""
+          className="w-screen h-4/5 md:w-mid sm:h-64 object-cover"
+        />
+        <div className="flex-col flex lg:mx-8 sm:mx-2">
+          <h1 className="my-2 font-bold text-white text-xl  mx-5">{heading}</h1>
+          <p className="mx-5 text-semibold tracking-tight lg:w-96 md:w-60">
+            {info}
+          </p>
         </div>
       </div>
-    </Fade>
+    </div>
   );
 };
 const ModelHeader = ({ id }) => {
@@ -137,13 +137,13 @@ const ModelComponent = ({ modelName, id }) => {
 
           {slogan && (
             <div
-              className={`text-xl font-semibold text-center mt-60 md:mt-72  text-white mb-4 select-none `}
+              className={`text-xl font-semibold text-center mt-60 md:mt-72  text-black mb-4 select-none `}
             >
               {slogan}
             </div>
           )}
           <section className=" md:flex-row flex flex-col  justify-center items-center">
-            <div className="flex  justify-between text-white text-center">
+            <div className="flex  justify-between text-black text-center">
               <div className="px-4 mx-2  mw-max md:px-4 md:mx-0">
                 <h1 className="text-xl font-bold text-center">{head1}</h1>
                 <h1 className="text-sm font-semibold ">{para1}</h1>
@@ -160,7 +160,7 @@ const ModelComponent = ({ modelName, id }) => {
             <div className="flex flex-col   justify-center items-center sm:flex-row mr-10 w-11/12 md:w-72">
               <Link
                 to="/2"
-                className="w-11/12  md:w-72 py-2 text-center bg-transparent border-4 border-white ml-4 text-white font-semibold rounded-3xl mb-4 sm:mb-0 sm:mr-8 mt-5 md:mt-0 cursor-pointer transition-all hover:bg-white hover:text-black"
+                className="w-11/12  md:w-72 py-2 text-center bg-transparent border-4 border-black ml-4 text-black font-semibold rounded-3xl mb-4 sm:mb-0 sm:mr-8 mt-5 md:mt-0 cursor-pointer transition-all hover:bg-black hover:text-white"
               >
                 ORDER NOW
               </Link>
