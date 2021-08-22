@@ -6,37 +6,9 @@
   @apply w-screen h-screen bg-no-repeat bg-cover sm:bg-cover pl-4 pr-3 transition-all overflow-x-hidden;
 }
 .model {
-  background-image: url(images/modelS.jpg);
+  background-image: url(images/model3.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  animation: bgChanger linear 10s infinite;
-}
-@keyframes bgChanger {
-  20% {
-    background: url(images/model3.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-  40% {
-    background: url(images/modelX.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-  60% {
-    background: url(images/modelY.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-  80% {
-    background: url(images/solarRoof.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-  100% {
-    background: url(images/solarPannel.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
 }
 
 .greet {
